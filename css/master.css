@@ -1,0 +1,295 @@
+/* Start Global codes */
+:root{
+    --main-color:rgb(35, 35, 36);
+    --section-padding:80px;
+}
+/* End Global codes */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 80px;
+}
+@media (min-width:767px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:991px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1100px) {
+    .container{
+        width: 1070px;
+    }
+}
+@media (min-width:1400px) {
+    .container{
+        width: 1370px;
+    }
+}
+/* Start header + logo */
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--main-color);
+    position: fixed;
+    z-index: 154;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+header ul{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+header ul li{
+    height: 100%;
+    text-transform: capitalize;
+    color: white;
+}
+header ul li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0px 15px;
+}
+a:visited{
+    color: white;
+}
+/* End header + logo */
+/* Start Landing */
+.landing{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.landing .layout{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .752);
+    z-index: 1;
+}
+.landing .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.landing .image img{
+    width: 100%;
+    height: 100%;
+}
+.landing .container{
+    position: relative;
+    height: 100%;
+}
+.landing .container .text{
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+}
+.landing .container .text :first-child{
+    margin: 0;
+}
+.landing .container .text :nth-child(2){
+    margin: 25px 0px;
+}
+/* End Landing */
+/* Start Music */
+.music{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background: var(--main-color);
+    color: white;
+}
+.music .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+.music .container :nth-child(3){
+    padding: 0 30px;
+}
+.music .container button{
+    width: fit-content;
+    margin: 0 auto;
+    border: none;
+}
+.music .container button a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 16, 16, 0.9);
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.music .container button a:hover{
+    background: rgb(211, 32, 32);
+}
+.music .container .image img{
+    width: 100%;
+    height: 100%;
+}
+/* End Music */
+/* Start Page 2 */
+.page2{
+    padding-top: var(--section-padding);
+}
+.page2 > .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+}
+.page2 .container .text {
+    text-align: center;
+}
+.page2 .container .text h2{
+    color: black;
+    font-size: 28px;
+}
+.page2 .container .text p{
+    color: black;
+    margin: 45px 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+.page2 .container .text button{
+    border: none;
+}
+.page2 .container .text button a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    text-decoration: none;
+    background: rgb(60, 60, 122);
+}
+.page2 > .image{
+    background: url(../imgs/section-bg.jpg) no-repeat bottom/cover;
+    padding: 140px 0;
+}
+.page2 .image .container h3{
+    font-size: 28px;
+    color: white;
+}
+.page2 > .image .container p{
+    color: white;
+}
+/* End Page 2  */
+/* Start Gift - cards */
+.gift-cards{
+    padding-top: var(--section-padding);
+}
+.gift-cards .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.gift-cards .container .image{
+    width: 100%;
+    overflow: hidden;
+}
+.gift-cards .container .image img{
+    width: 100%;
+    height: 100%;
+}
+.gift-cards .container .data{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.gift-cards .container .data .link{
+    display: flex;
+    width: 100%;
+    border-top: 1px solid rgb(35, 35, 77);;
+    padding-top: 20px;
+}
+.gift-cards .container .data .link a i{
+    color: rgb(35, 35, 77);
+    padding-right: 5px;
+}
+.gift-cards .container .data .link a{
+    text-decoration: none;
+    color: rgb(35, 35, 77);
+}
+/* End Gift - cards */
+/* Start footer */
+footer{
+    padding-top: var(--section-padding);
+    background: var(--main-color);
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+footer .container ul{
+    margin-bottom: 30px;
+}
+footer .container ul h2{
+    color: #fff;
+    border-bottom: 1px solid #ffffff63;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    max-width: 70%;
+    font-size: 18px;
+    font-weight: 250;
+}
+footer .container ul li{}
+footer .container ul li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #ccc;
+    padding: 3px 0;
+    text-decoration: none;
+    font-size: 13px;
+}
+footer span{
+    width: 100%;
+    padding: 15px 0;
+    background: #645f5f6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+/* End footer */

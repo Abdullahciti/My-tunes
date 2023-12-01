@@ -45,16 +45,27 @@ ul{
 header{
     top: 0;
     left: 0;
-    width: 100%;
     height: 50px;
+    width:100vw;
     background: var(--main-color);
     position: fixed;
     z-index: 154;
 }
+
 header .container{
     display: flex;
     align-items: center;
     height: 100%;
+}
+@media (max-width:991px) {
+    header{
+        height: 35px;
+    }
+    .container{
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
 }
 header ul{
     display: flex;
@@ -78,6 +89,12 @@ header ul li a{
     width: 100%;
     padding: 0px 15px;
 }
+@media (max-width:991px) {
+    header ul li a{
+        padding: 0px 10px;
+        font-size: 10px;
+    }
+}
 a:visited{
     color: white;
 }
@@ -88,6 +105,15 @@ a:visited{
     height: 100vh;
     width: 100%;
     overflow: hidden;
+}
+@media (max-width:991px) {
+    .landing{
+        height: calc(100vw + 35px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--section-padding) 0;
+    }
 }
 .landing .layout{
     position: absolute;
@@ -108,25 +134,38 @@ a:visited{
 .landing .container{
     position: relative;
     height: 100%;
+    z-index: 3;
+}
+@media (max-width:991px) {
+    .landing .container{
+        padding: 33px;
+    }
 }
 .landing .container .text{
-    width: 100%;
-    position: absolute;
-    z-index: 3;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
     color: white;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 80px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
 }
-.landing .container .text :first-child{
-    margin: 0;
-}
-.landing .container .text :nth-child(2){
-    margin: 25px 0px;
+@media (max-width:991px) {
+    .landing .container .text{
+        gap: 7px;
+    }
+    .landing .container .text h1{
+        font-size: 14px;        
+    }
+    .landing .container .text h3{
+        font-size: 10px;        
+    }
+    .landing .container .text p{
+        font-size: 7px;
+        max-width: 80%;
+    }
+    
 }
 /* End Landing */
 /* Start Music */
@@ -141,6 +180,12 @@ a:visited{
     flex-direction: column;
     gap: 30px;
     text-align: center;
+}
+@media (max-width:991px) {
+    .music .container{
+        gap: 10px;
+        padding: 33px;
+    }
 }
 .music .container :nth-child(3){
     padding: 0 30px;
@@ -165,6 +210,24 @@ a:visited{
 .music .container .image img{
     width: 100%;
     height: 100%;
+}
+@media (max-width:991px) {
+    .music .container h1 {
+        font-size: 16px;
+    }
+    .music .container h2 {
+        font-size: 14px;
+    }
+    .music .container h4 {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .music .container button {
+        font-size: 12px;
+    }
+    .music .container p{
+        font-size: 8px;
+    }
 }
 /* End Music */
 /* Start Page 2 */
@@ -197,11 +260,10 @@ a:visited{
 }
 .page2 .container .text button a{
     display: block;
-    width: 100%;
-    height: 100%;
     padding: 10px 15px;
     text-decoration: none;
     background: rgb(60, 60, 122);
+    color: white;
 }
 .page2 > .image{
     background: url(../imgs/section-bg.jpg) no-repeat bottom/cover;
@@ -214,10 +276,21 @@ a:visited{
 .page2 > .image .container p{
     color: white;
 }
+@media (max-width:991px) {
+    .page2 .container .text p{
+        max-width: 75%;
+        margin: 17px auto;
+    }
+    .page2 .container .text button a{
+        color: white;
+        padding: 8px;
+    }
+    
+}
 /* End Page 2  */
 /* Start Gift - cards */
 .gift-cards{
-    padding-top: var(--section-padding);
+    padding: var(--section-padding) 0;
 }
 .gift-cards .container{
     display: grid;
@@ -251,6 +324,20 @@ a:visited{
     text-decoration: none;
     color: rgb(35, 35, 77);
 }
+@media (max-width:991px) {
+    .gift-cards .container{
+        grid-template-columns: 300px;
+    }
+    .gift-cards .container span{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .gift-cards .container .data .link a{
+        text-decoration: none;
+        color: rgb(35, 35, 77);
+    }
+
+}
 /* End Gift - cards */
 /* Start footer */
 footer{
@@ -260,6 +347,13 @@ footer{
 footer .container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+@media (max-width:767px) {
+    footer .container{
+        padding: 0 17px;
+        display: flex;
+        justify-content: space-around;
+    }
 }
 footer .container ul{
     margin-bottom: 30px;
@@ -273,7 +367,6 @@ footer .container ul h2{
     font-size: 18px;
     font-weight: 250;
 }
-footer .container ul li{}
 footer .container ul li a{
     width: 100%;
     height: 100%;
@@ -293,3 +386,23 @@ footer span{
     color: #fff;
 }
 /* End footer */
+@media (max-width:991px) {
+    h1{
+        font-size:16px !important;
+    }
+    h2{
+        font-size:14px !important;
+    }
+    h3{
+        font-size:12px !important;
+    }
+    h4{
+        font-size:12px !important;
+    }
+    p{
+        font-size:8px !important;
+    }
+    a{
+        font-size: 14px !important;
+    }
+}
